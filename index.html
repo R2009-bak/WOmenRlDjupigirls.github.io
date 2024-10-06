@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Archivo+Black&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            background-image: url('Снимок экрана (13).png'); /* Указываем путь к изображению */
+            background-size: cover; /* Картинка растягивается на весь экран */
+            background-position: center; /* Центрируем картинку */
+        }
+        .header {
+            position: absolute;
+            top: 50px;
+            text-align: center;
+            width: 100%;
+        }
+        .header h1 {
+            font-size: 64px; /* Увеличиваем размер шрифта заголовка */
+            font-weight: bold; /* Опционально для выделения */
+            font-family: 'Archivo Black', sans-serif; /* Применяем шрифт Archivo Black */
+            color: white; /* Устанавливаем цвет текста на белый */
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px; /* Отступ сверху для контейнера кнопок */
+        }
+        .container h2 {
+            font-size: 64px; /* Увеличиваем размер шрифта заголовка */
+            font-weight: bold; /* Опционально для выделения */
+            font-family: 'Afacad Flux', sans-serif; /* Применяем шрифт Afacad Flux */
+            color: white; /* Устанавливаем цвет текста на белый */
+        }
+        button {
+            margin: 30px; /* Увеличиваем расстояние между кнопками */
+            padding: 30px 50px; /* Увеличиваем размер кнопок */
+            font-size: 30px; /* Увеличиваем размер текста на кнопках */
+            cursor: pointer;
+            background-color: #db6a80; /* Цвет фона кнопок (зеленый) */
+            color: white; /* Цвет текста на кнопках (белый) */
+            border: none; /* Убираем стандартную рамку */
+            border-radius: 20px; /* Устанавливаем радиус скругления углов кнопок */
+            transition: background-color 0.3s; /* Плавный переход цвета фона */
+        }
+        button:hover {
+            background-color: #bd3462; /* Цвет фона при наведении (темнее зеленого) */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to the women's world</h1>
+    </div>
+
+    <div class="container">
+        <h2>How old are you?</h2>
+        <button onclick="goToPage('page1.html')">3-10</button>
+        <button onclick="goToPage('page2.html')">11-16</button>
+        <button onclick="goToPage('page3.html')">16+</button>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
